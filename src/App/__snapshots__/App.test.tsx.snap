@@ -47,7 +47,7 @@ exports[`App matches loading snapshot 1`] = `
 </DocumentFragment>
 `;
 
-exports[`App w/ initialTab=2 matches loading snapshot 1`] = `
+exports[`App w/ initialTab=2 when loaded matches snapshot 1`] = `
 <DocumentFragment>
   <article
     class="app"
@@ -94,7 +94,7 @@ exports[`App w/ initialTab=2 matches loading snapshot 1`] = `
 </DocumentFragment>
 `;
 
-exports[`App w/ initialTab=3 matches loading snapshot 1`] = `
+exports[`App w/ initialTab=3 when loaded matches snapshot 1`] = `
 <DocumentFragment>
   <article
     class="app"

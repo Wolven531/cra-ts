@@ -39,10 +39,10 @@ describe('App', () => {
 	})
 })
 
-describe('App w/ initialTab=2', () => {
+describe('App w/ initialTab=2 when loaded', () => {
 	let comp: RenderResult
 
-	beforeEach(() => {
+	beforeEach(async () => {
 		comp = render(
 			<MemoryRouter initialEntries={['/tabs/2']} initialIndex={0}>
 				<Route path={['/tabs/:tabId', '/tabs', '/']}>
@@ -50,17 +50,19 @@ describe('App w/ initialTab=2', () => {
 				</Route>
 			</MemoryRouter>
 		)
+
+		await waitFor(() => comp.getByTestId('app'))
 	})
 
-	it('matches loading snapshot', () => {
+	it('matches snapshot', () => {
 		expect(comp.asFragment()).toMatchSnapshot()
 	})
 })
 
-describe('App w/ initialTab=3', () => {
+describe('App w/ initialTab=3 when loaded', () => {
 	let comp: RenderResult
 
-	beforeEach(() => {
+	beforeEach(async () => {
 		comp = render(
 			<MemoryRouter initialEntries={['/tabs/3']} initialIndex={0}>
 				<Route path={['/tabs/:tabId', '/tabs', '/']}>
@@ -68,9 +70,11 @@ describe('App w/ initialTab=3', () => {
 				</Route>
 			</MemoryRouter>
 		)
+
+		await waitFor(() => comp.getByTestId('app'))
 	})
 
-	it('matches loading snapshot', () => {
+	it('matches snapshot', () => {
 		expect(comp.asFragment()).toMatchSnapshot()
 	})
 })
