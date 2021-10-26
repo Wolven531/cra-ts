@@ -20,6 +20,8 @@ jobs:
       uses: actions/setup-node@v2
       with:
         node-version: ${{ matrix.node-version }}
-        cache: 'node_modules'
+        # cache: 'npm'
+        # cache: 'node_modules'
+        cache: 'yarn'
     - run: yarn
     - run: yarn test
