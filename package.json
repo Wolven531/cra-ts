@@ -30,7 +30,7 @@
 		"eject": "react-scripts eject",
 		"snaps": "react-scripts test --watchAll=false -u",
 		"start": "react-scripts start",
-		"test": "react-scripts test --watchAll=false",
+		"test": "react-scripts test --watchAll=false --collect-coverage",
 		"test-watch": "react-scripts test"
 	},
 	"eslintConfig": {
