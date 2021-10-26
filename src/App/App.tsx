@@ -8,12 +8,12 @@ export const App: FC<any> = () => {
 	// useEffect(() => {}, [])
 
 	return (
-		<article className="app">
-			<header className="">
+		<article className="app" data-testid="app">
+			<header>
 				<h3>TS Playground</h3>
 			</header>
 			<Tabs onTabChange={setSelectedTab} selectedTab={selectedTab} />
-			<section className="content">
+			<section className="content" data-testid="content">
 				{selectedTab === 1 && <div>Content 1</div>}
 				{selectedTab === 2 && <div>Content 2</div>}
 				{selectedTab === 3 && <div>Content 3</div>}
