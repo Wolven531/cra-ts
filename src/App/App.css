@@ -1,0 +1,40 @@
+@import '../vars.css';
+
+.app {
+	background-color: var(--halloween-gray);
+	padding: var(--spacing) 0;
+	color: var();
+}
+
+.content {
+	border: 1px solid var(--halloween-orange);
+	border-radius: 5px;
+	box-shadow: 0 0 5px 5px var(--halloween-black-faded);
+	box-sizing: border-box;
+	color: var(--halloween-orange);
+	display: flex;
+	height: var(--content-height);
+	margin: var(--spacing) auto;
+	padding: var(--spacing);
+	width: var(--content-width);
+}
+
+footer {
+	box-sizing: border-box;
+	color: var(--halloween-orange);
+	display: flex;
+	justify-content: center;
+	margin: var(--spacing) auto;
+	text-shadow: 1px 1px var(--halloween-black-faded);
+	width: var(--content-width);
+}
+
+header {
+	box-sizing: border-box;
+	color: var(--halloween-orange);
+	display: flex;
+	justify-content: center;
+	margin: var(--spacing) auto;
+	text-shadow: 1px 1px var(--halloween-black-faded);
+	width: var(--content-width);
+}
