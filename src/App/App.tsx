@@ -2,8 +2,14 @@ import React, { FC, useState } from 'react'
 import { Tabs } from '../Tabs'
 import './App.css'
 
-export const App: FC<any> = () => {
-	const [selectedTab, setSelectedTab] = useState(1)
+export interface AppProps {
+	initialTab?: number
+}
+
+export const App: FC<AppProps> = ({ initialTab }) => {
+	const [selectedTab, setSelectedTab] = useState(
+		initialTab !== undefined ? initialTab : 1
+	)
 
 	// useEffect(() => {}, [])
 

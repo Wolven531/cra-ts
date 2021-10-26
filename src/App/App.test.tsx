@@ -38,3 +38,39 @@ describe('App', () => {
 		})
 	})
 })
+
+describe('App w/ initialTab=2', () => {
+	let comp: RenderResult
+
+	beforeEach(() => {
+		comp = render(
+			<MemoryRouter initialEntries={['/tabs/2']} initialIndex={0}>
+				<Route path={['/tabs/:tabId', '/tabs', '/']}>
+					<App initialTab={2} />
+				</Route>
+			</MemoryRouter>
+		)
+	})
+
+	it('matches loading snapshot', () => {
+		expect(comp.asFragment()).toMatchSnapshot()
+	})
+})
+
+describe('App w/ initialTab=3', () => {
+	let comp: RenderResult
+
+	beforeEach(() => {
+		comp = render(
+			<MemoryRouter initialEntries={['/tabs/3']} initialIndex={0}>
+				<Route path={['/tabs/:tabId', '/tabs', '/']}>
+					<App initialTab={3} />
+				</Route>
+			</MemoryRouter>
+		)
+	})
+
+	it('matches loading snapshot', () => {
+		expect(comp.asFragment()).toMatchSnapshot()
+	})
+})
