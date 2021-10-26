@@ -1,0 +1,189 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App matches loading snapshot 1`] = `
+<DocumentFragment>
+  <article
+    class="app"
+    data-testid="app"
+  >
+    <header>
+      <h3>
+        TS Playground
+      </h3>
+    </header>
+    <section
+      class="tabs"
+    >
+      <ul>
+        <li
+          class="selected"
+        >
+          tab 1
+        </li>
+        <li
+          class=""
+        >
+          tab 2
+        </li>
+        <li
+          class=""
+        >
+          tab 3
+        </li>
+      </ul>
+    </section>
+    <section
+      class="content"
+      data-testid="content"
+    >
+      <div>
+        Content 1
+      </div>
+    </section>
+    <footer>
+      © 2021 Anthony Williams
+    </footer>
+  </article>
+</DocumentFragment>
+`;
+
+exports[`App w/ initialTab=2 when loaded matches snapshot 1`] = `
+<DocumentFragment>
+  <article
+    class="app"
+    data-testid="app"
+  >
+    <header>
+      <h3>
+        TS Playground
+      </h3>
+    </header>
+    <section
+      class="tabs"
+    >
+      <ul>
+        <li
+          class=""
+        >
+          tab 1
+        </li>
+        <li
+          class="selected"
+        >
+          tab 2
+        </li>
+        <li
+          class=""
+        >
+          tab 3
+        </li>
+      </ul>
+    </section>
+    <section
+      class="content"
+      data-testid="content"
+    >
+      <div>
+        Content 2
+      </div>
+    </section>
+    <footer>
+      © 2021 Anthony Williams
+    </footer>
+  </article>
+</DocumentFragment>
+`;
+
+exports[`App w/ initialTab=3 when loaded matches snapshot 1`] = `
+<DocumentFragment>
+  <article
+    class="app"
+    data-testid="app"
+  >
+    <header>
+      <h3>
+        TS Playground
+      </h3>
+    </header>
+    <section
+      class="tabs"
+    >
+      <ul>
+        <li
+          class=""
+        >
+          tab 1
+        </li>
+        <li
+          class=""
+        >
+          tab 2
+        </li>
+        <li
+          class="selected"
+        >
+          tab 3
+        </li>
+      </ul>
+    </section>
+    <section
+      class="content"
+      data-testid="content"
+    >
+      <div>
+        Content 3
+      </div>
+    </section>
+    <footer>
+      © 2021 Anthony Williams
+    </footer>
+  </article>
+</DocumentFragment>
+`;
+
+exports[`App when loaded matches snapshot 1`] = `
+<DocumentFragment>
+  <article
+    class="app"
+    data-testid="app"
+  >
+    <header>
+      <h3>
+        TS Playground
+      </h3>
+    </header>
+    <section
+      class="tabs"
+    >
+      <ul>
+        <li
+          class="selected"
+        >
+          tab 1
+        </li>
+        <li
+          class=""
+        >
+          tab 2
+        </li>
+        <li
+          class=""
+        >
+          tab 3
+        </li>
+      </ul>
+    </section>
+    <section
+      class="content"
+      data-testid="content"
+    >
+      <div>
+        Content 1
+      </div>
+    </section>
+    <footer>
+      © 2021 Anthony Williams
+    </footer>
+  </article>
+</DocumentFragment>
+`;
