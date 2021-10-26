@@ -37,7 +37,7 @@ export const Tabs: FC<TabsProps> = ({ onTabChange, selectedTab }) => {
 
 		const paramTab = parseInt(params.tabId)
 		handleTabClick(paramTab)
-	}, [handleTabClick, params.tabId, onTabChange])
+	}, [handleTabClick, onTabChange, params.tabId, selectedTab])
 
 	return (
 		<section className="tabs">
