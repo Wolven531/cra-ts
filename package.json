@@ -26,10 +26,12 @@
 		"@types/react-router-dom": "^5.3.1"
 	},
 	"scripts": {
-		"start": "react-scripts start",
 		"build": "react-scripts build",
-		"test": "react-scripts test",
-		"eject": "react-scripts eject"
+		"eject": "react-scripts eject",
+		"snaps": "react-scripts test --watchAll=false -u",
+		"start": "react-scripts start",
+		"test": "react-scripts test --watchAll=false",
+		"test-watch": "react-scripts test"
 	},
 	"eslintConfig": {
 		"extends": [
