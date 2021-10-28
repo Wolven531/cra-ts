@@ -3,7 +3,6 @@
 .app {
 	background-color: var(--halloween-gray);
 	padding: var(--spacing) 0;
-	color: var();
 }
 
 .content {

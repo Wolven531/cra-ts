@@ -17,16 +17,19 @@ exports[`App matches loading snapshot 1`] = `
       <ul>
         <li
           class="selected"
+          data-testid="tab"
         >
           tab 1
         </li>
         <li
           class=""
+          data-testid="tab"
         >
           tab 2
         </li>
         <li
           class=""
+          data-testid="tab"
         >
           tab 3
         </li>
@@ -64,16 +67,19 @@ exports[`App w/ initialTab=2 when loaded matches snapshot 1`] = `
       <ul>
         <li
           class=""
+          data-testid="tab"
         >
           tab 1
         </li>
         <li
           class="selected"
+          data-testid="tab"
         >
           tab 2
         </li>
         <li
           class=""
+          data-testid="tab"
         >
           tab 3
         </li>
@@ -111,16 +117,19 @@ exports[`App w/ initialTab=3 when loaded matches snapshot 1`] = `
       <ul>
         <li
           class=""
+          data-testid="tab"
         >
           tab 1
         </li>
         <li
           class=""
+          data-testid="tab"
         >
           tab 2
         </li>
         <li
           class="selected"
+          data-testid="tab"
         >
           tab 3
         </li>
@@ -158,16 +167,19 @@ exports[`App when loaded matches snapshot 1`] = `
       <ul>
         <li
           class="selected"
+          data-testid="tab"
         >
           tab 1
         </li>
         <li
           class=""
+          data-testid="tab"
         >
           tab 2
         </li>
         <li
           class=""
+          data-testid="tab"
         >
           tab 3
         </li>
