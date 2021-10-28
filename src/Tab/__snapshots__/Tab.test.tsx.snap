@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tab matches loading snapshot 1`] = `
+<DocumentFragment>
+  <li
+    class="selected"
+    data-testid="tab"
+  >
+    tab 3
+  </li>
+</DocumentFragment>
+`;
+
+exports[`Tab when loaded and not selected matches snapshot 1`] = `
+<DocumentFragment>
+  <li
+    class=""
+    data-testid="tab"
+  >
+    tab 2
+  </li>
+</DocumentFragment>
+`;
+
+exports[`Tab when loaded and selected matches snapshot 1`] = `
+<DocumentFragment>
+  <li
+    class="selected"
+    data-testid="tab"
+  >
+    tab 3
+  </li>
+</DocumentFragment>
+`;
