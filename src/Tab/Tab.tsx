@@ -11,6 +11,7 @@ export const Tab: FC<TabProps> = ({ onClick, selected, tabNum }) => {
 	return (
 		<li
 			className={selected ? 'selected' : ''}
+			data-testid="tab"
 			onClick={() => {
 				onClick(tabNum)
 			}}
