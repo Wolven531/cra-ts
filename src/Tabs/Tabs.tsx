@@ -23,7 +23,7 @@ export const Tabs: FC<TabsProps> = ({ onTabChange, selectedTab }) => {
 			history.push(makeTabRoute(tabNum))
 			onTabChange?.(tabNum)
 		},
-		[history, makeTabRoute, onTabChange]
+		[history, onTabChange]
 	)
 
 	/**
