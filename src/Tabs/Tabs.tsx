@@ -1,4 +1,6 @@
-import React, { FC, useMemo } from 'react'
+import React, { FC, useCallback, useEffect } from 'react'
+import { useHistory, useParams } from 'react-router-dom'
+import { makeTabRoute } from '../routes'
 import { Tab } from '../Tab'
 import './Tabs.css'
 
@@ -8,17 +10,34 @@ export interface TabsProps {
 }
 
 export const Tabs: FC<TabsProps> = ({ onTabChange, selectedTab }) => {
+	const history = useHistory()
+	const params = useParams<{ tabId?: string }>()
+
 	/**
 	 * Handles when tab is clicked; if provided, invokes onTabChange(). Also updates location
 	 *
 	 * @param tabNum
 	 */
-	const handleTabClick = useMemo(
-		() => (tabNum: number) => {
+	const handleTabClick = useCallback(
+		(tabNum: number) => {
+			history.push(makeTabRoute(tabNum))
 			onTabChange?.(tabNum)
 		},
-		[onTabChange]
+		[history, makeTabRoute, onTabChange]
 	)
+
+	/**
+	 * Runs on component mount
+	 */
+	useEffect(() => {
+		if (params.tabId === undefined) {
+			handleTabClick(selectedTab)
+			return
+		}
+
+		const paramTab = parseInt(params.tabId)
+		handleTabClick(paramTab)
+	}, [handleTabClick, params.tabId, selectedTab])
 
 	return (
 		<section className="tabs">
