@@ -1,5 +1,6 @@
 import React from 'react'
 import { render, RenderResult, waitFor } from '@testing-library/react'
+import userEvent from '@testing-library/user-event'
 import { Tab } from './Tab'
 import { MemoryRouter, Route } from 'react-router-dom'
 
@@ -55,5 +56,16 @@ describe('Tab when loaded and not selected', () => {
 
 	it('matches snapshot', () => {
 		expect(comp.asFragment()).toMatchSnapshot()
+	})
+
+	describe('when clicked', () => {
+		beforeEach(() => {
+			userEvent.click(comp.getByTestId('tab'))
+		})
+
+		it('invokes provided onClick() properly', () => {
+			expect(mockOnClick).toHaveBeenCalledTimes(1)
+			expect(mockOnClick).toHaveBeenLastCalledWith(2)
+		})
 	})
 })
