@@ -33,10 +33,22 @@ describe('Tab', () => {
 		it('matches snapshot', () => {
 			expect(comp.asFragment()).toMatchSnapshot()
 		})
+
+		describe('when clicked', () => {
+			beforeEach(() => {
+				userEvent.click(comp.getByTestId('tab'))
+			})
+
+			it('invokes provided onClick() properly', () => {
+				expect(mockOnClick).toHaveBeenCalledTimes(1)
+				expect(mockOnClick).toHaveBeenLastCalledWith(fakeTabNum)
+			})
+		})
 	})
 })
 
 describe('Tab when loaded and not selected', () => {
+	const fakeTabNum = 2
 	let comp: RenderResult
 	let mockOnClick: jest.Mock
 
@@ -46,7 +58,7 @@ describe('Tab when loaded and not selected', () => {
 		comp = render(
 			<MemoryRouter initialEntries={['/tabs/1']} initialIndex={0}>
 				<Route path={['/tabs/:tabId', '/tabs']}>
-					<Tab onClick={mockOnClick} selected={false} tabNum={2} />
+					<Tab onClick={mockOnClick} selected={false} tabNum={fakeTabNum} />
 				</Route>
 			</MemoryRouter>
 		)
@@ -65,7 +77,7 @@ describe('Tab when loaded and not selected', () => {
 
 		it('invokes provided onClick() properly', () => {
 			expect(mockOnClick).toHaveBeenCalledTimes(1)
-			expect(mockOnClick).toHaveBeenLastCalledWith(2)
+			expect(mockOnClick).toHaveBeenLastCalledWith(fakeTabNum)
 		})
 	})
 })
