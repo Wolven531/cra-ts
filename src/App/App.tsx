@@ -11,8 +11,6 @@ export const App: FC<AppProps> = ({ initialTab }) => {
 		initialTab !== undefined ? initialTab : 1
 	)
 
-	// useEffect(() => {}, [])
-
 	return (
 		<article className="app" data-testid="app">
 			<header>

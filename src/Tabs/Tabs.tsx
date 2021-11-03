@@ -1,5 +1,6 @@
-import React, { FC, useEffect, useMemo } from 'react'
+import React, { FC, useCallback, useEffect } from 'react'
 import { useHistory, useParams } from 'react-router-dom'
+import { makeTabRoute } from '../routes'
 import { Tab } from '../Tab'
 import './Tabs.css'
 
@@ -17,11 +18,10 @@ export const Tabs: FC<TabsProps> = ({ onTabChange, selectedTab }) => {
 	 *
 	 * @param tabNum
 	 */
-	const handleTabClick = useMemo(
-		() => (tabNum: number) => {
+	const handleTabClick = useCallback(
+		(tabNum: number) => {
+			history.push(makeTabRoute(tabNum))
 			onTabChange?.(tabNum)
-
-			history.push(`/tabs/${tabNum}`)
 		},
 		[history, onTabChange]
 	)
@@ -37,7 +37,7 @@ export const Tabs: FC<TabsProps> = ({ onTabChange, selectedTab }) => {
 
 		const paramTab = parseInt(params.tabId)
 		handleTabClick(paramTab)
-	}, [handleTabClick, onTabChange, params.tabId, selectedTab])
+	}, [handleTabClick, params.tabId, selectedTab])
 
 	return (
 		<section className="tabs">
